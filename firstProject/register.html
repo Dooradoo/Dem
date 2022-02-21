@@ -1,18 +1,76 @@
 <!DOCTYPE html>
-<html >
+<html>
+
 <head>
+    <link href="styles/style.css" rel="stylesheet">
     <title>Регистрация</title>
 </head>
+
 <body>
-    <form>
-        <table>
-            <tr><td>ФИО</td><td><input type="text"/></td></tr>
-            <tr><td>Логин</td><td><input type="text"/></td></tr>
-            <tr><td>E-mail</td><td><input type="email"/></td></tr>
-            <tr><td>Пароль</td><td><input type="text"/></td></tr>
-        </table>
-        <button type="submit">Зарегестрироваться</button>
-    </form>
+    <table>
+        <tr>
+            <td>ФИО</td>
+            <td><input id="fio" type="text" /></td>
+            <td><span class="err" id="fioErr"></span></td>
+        </tr>
+        <tr>
+            <td>Логин</td>
+            <td><input id="login" type="text" /></td>
+            <td><span class="err" id="loginErr"></span></td>
+        </tr>
+        <tr>
+            <td>E-mail</td>
+            <td><input id="email" type="email" /></td>
+            <td><span class="err" id="emailErr"></span></td>
+        </tr>
+        <tr>
+            <td>Пароль</td>
+            <td><input id="pass" type="text" /></td>
+            <td><span class="err" id="passErr"></span></td>
+        </tr>
+    </table>
+    <input type="button" onclick="saveForm()" value="Зарегестрироваться">
     <a href="index.html">Назад</a>
 </body>
+
+<script>
+    function saveForm() {
+        var fio = document.getElementById('fio');
+        var login = document.getElementById('login');
+        var email = document.getElementById('email');
+        var pass = document.getElementById('pass');
+        if (fio.value == '') {
+            var fioErr = document.getElementById('fioErr');
+            fioErr.innerText = 'Введите имя';
+        } else {
+            var fioErr = document.getElementById('fioErr');
+            fioErr.innerText = '';
+        }
+
+        if (login.value == '') {
+            var loginErr = document.getElementById('loginErr');
+            loginErr.innerText = 'Это поле обязателно!!';
+        } else {
+            var loginErr = document.getElementById('loginErr');
+            loginErr.innerText = '';
+        }
+
+        if (email.value == '') {
+            var emailErr = document.getElementById('emailErr');
+            emailErr.innerText = 'Это поле обязателно!!';
+        } else {
+            var emailErr = document.getElementById('emailErr');
+            emailErr.innerText = '';
+        }
+
+        if (pass.value == '') {
+            var passErr = document.getElementById('passErr');
+            passErr.innerText = 'Это поле обязателно!!';
+        } else {
+            var passErr = document.getElementById('passErr');
+            passErr.innerText = '';
+        }
+    }
+</script>
+
 </html>

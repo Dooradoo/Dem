@@ -7,10 +7,16 @@ p {
 .myclass {
     text-align: center;
     border: 2px dashed blue;
-    background-color: aqua;
+    background-color:#40E0D0;
     color: blueviolet;
     font-family: fantasy;
     font-size: 90px;
+}
+
+.img {
+  border: 2px dashed blue;
+    background-color: #40E0D0;
+    color: blueviolet;
 }
 
 h1 {
@@ -28,6 +34,7 @@ ul {
   
   li {
     display: inline;
+    
   }
   
   a {
@@ -46,14 +53,16 @@ ul {
   }
   
   a:link, a:visited, a:focus {
-    background: yellow;
+    background:  linear-gradient(225deg,
+    #1BF2DD ,
+    #F2EA7E , 
+    #F2BA52 ,
+    #F2994B ,
+    #F23E2E 
+    );
   }
-  
-  a:hover {
-    background: orange;
+
+  .err { 
+    color: red;
   }
-  
-  a:active {
-    background: red;
-    color: white;
-  }
+
